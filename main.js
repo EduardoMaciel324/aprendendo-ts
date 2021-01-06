@@ -21,9 +21,19 @@ var Person = /** @class */ (function () {
     };
     return Person;
 }());
-function hasValue(man) {
-    man = new Person(1, 'Eduardo');
-    man.displayInfo();
-}
-var man;
-hasValue(man);
+var Eduardo = new Person(1, 'Eduardo');
+Eduardo.displayInfo();
+var Car = /** @class */ (function () {
+    function Car(model, make, chassi) {
+        this.model = model;
+        this.make = make;
+        this.chassi = chassi;
+    }
+    Car.prototype.displayCarInfo = function () {
+        console.log("Modelo: " + this.model + " Marca: " + this.make + " Chassi: " + this.chassi);
+    };
+    return Car;
+}());
+;
+var Toyota = new Car('Corolla', 'Toyota', 1321564456798);
+Toyota.displayCarInfo();
